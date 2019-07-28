@@ -4,25 +4,32 @@
 
 int _printf(const char *format, ...)
 {
+	va_list argument;
         int i = 0, size = 0;
 
         while (format == NULL)
         {
                 return (0);
         }
+
+	va_start(argument, format);
         for (i = 0; format[i] != '\0'; i++)
         {
-                /**printf("hola%c\n",format[i]);**/
                 size = size + 1;
-                _putchar(format[i]);
 
-                if (*(format + i) == '\n')
+              /**  if (*(format + i) == '\n')
                 {
                         _putchar('\n');
-                        printf("%d\n",i);
-                }
-        }
-
+                }*/
+		if (*(format + i) == '%' && (*(format + (i + 1)) == 'c'))
+		{
+			_putchar((char)va_arg(argument, int));
+			i = i + 2;
+		
+		}
+		_putchar(format[i]);
+	}
+	va_end(argument);
         return size;
 }
 
