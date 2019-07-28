@@ -5,7 +5,8 @@
 int _printf(const char *format, ...)
 {
 	va_list argument;
-        int i = 0, size = 0;
+        int i = 0, size = 0, j = 0;
+	char *str;
 
         while (format == NULL)
         {
@@ -25,7 +26,16 @@ int _printf(const char *format, ...)
 		{
 			_putchar((char)va_arg(argument, int));
 			i = i + 2;
-		
+		}
+		if (*(format + i) == '%' && (*(format + (i + 1)) == 's'))
+		{
+			str = (va_arg(argument, char*));
+			while (str[j] != '\0' && str != NULL)
+			{
+				_putchar(str[j]);
+				j++;
+			}
+			i = i + 2;
 		}
 		_putchar(format[i]);
 	}
