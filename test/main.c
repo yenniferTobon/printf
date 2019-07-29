@@ -1,6 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
-#include "holberton.h"
+#include "../holberton.h"
 
 /**
  * main - Entry point
@@ -14,7 +14,9 @@ int main(void)
    unsigned int ui;
     void *addr;**/
 
-   _printf("Let's try to printf a simple sentence.\n");
+   _printf("Let's try to printf a simple sentence%.\n");
+   _printf("xyz%k\n");
+   printf("%");
    _printf("Character:[%c]\n", 'H');
    _printf("String:[%s]\n", "I am a string !");
    _printf("la casa is %s y el carro is %s.\n", "roja", "negro");
