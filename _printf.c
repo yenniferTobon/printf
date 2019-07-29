@@ -21,6 +21,8 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + i) == '%')
 		{
+			if(i == 0 && *(format + (i + 1)) == '\0')
+				return (-1);
 			switch (*(format + (i + 1)))
 			{
 				case 'c':
