@@ -21,6 +21,8 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + i) == '%')
 		{
+			if(*(format + (i + 1)) == '\0')
+				return (-1);
 			switch (*(format + (i + 1)))
 			{
 				case 'c':
@@ -41,6 +43,7 @@ int _printf(const char *format, ...)
 					_putchar('%');
 					size++;
 					break;
+				/**case '%':*/
 			}
 			i = i + 2;
 		}
@@ -50,4 +53,3 @@ int _printf(const char *format, ...)
 	va_end(argument);
 	return (size);
 }
-
