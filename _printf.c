@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		if (*(format + i) == '%')
 		{
 			if(*(format + (i + 1)) == '\0')
+<<<<<<< HEAD
 			{
 				if (i != 0)
 					return (-1);
@@ -29,6 +30,8 @@ int _printf(const char *format, ...)
 					return (-1);
 			}
 			if(i == 0 && *(format + (i + 1)) == '\0')
+=======
+>>>>>>> 20ca76af0f069c4bbcb257dbe9bdea571e975249
 				return (-1);
 			switch (*(format + (i + 1)))
 			{
@@ -53,6 +56,7 @@ int _printf(const char *format, ...)
 					size++;
 					i = i + 2;
 					break;
+				/**case '%':*/
 			}
 		}
 		_putchar(format[i]);
@@ -61,4 +65,3 @@ int _printf(const char *format, ...)
 	va_end(argument);
 	return (size);
 }
-
