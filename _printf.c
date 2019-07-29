@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list argument;
-	int i = 0, size = 0, j = 0;
+	int i = 0, size = 0;
 	char *str;
 
 	while (format == NULL)
@@ -31,16 +31,11 @@ int _printf(const char *format, ...)
 					str = (va_arg(argument, char*));
 					if (str == NULL)
 					{
-						printf("(nil)");
+						str = "(nil)";
 						break;
 					}
-					j = 0;
-					while (str[j] != '\0' && str != NULL)
-					{
-						_putchar(str[j]);
-						size++;
-						j++;
-					}
+					_puts(str);
+					size = size + _strlen(str);
 					break;
 				case '%':
 					_putchar('%');
@@ -53,6 +48,6 @@ int _printf(const char *format, ...)
 		size = size + 1;
 	}
 	va_end(argument);
-        return (size);
+	return (size);
 }
 
