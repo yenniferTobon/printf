@@ -17,8 +17,8 @@ int main(void)
    _printf("Let's try to printf a simple sentence.\n");
    _printf("Character:[%c]\n", 'H');
    _printf("String:[%s]\n", "I am a string !");
-  _printf("%", "asd");
-
+   _printf("la casa is %s y el carro is %s.\n", "roja", "negro");
+   _printf("Percent:[%%]\n");
   /** len = printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
