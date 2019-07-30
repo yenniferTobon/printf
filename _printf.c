@@ -14,6 +14,7 @@
 void _switch(int *size, int *i, const char *format, va_list argument)
 {
 	char *str;
+	int num;
 
 	switch (format[*i + 1])
 	{
@@ -40,6 +41,12 @@ void _switch(int *size, int *i, const char *format, va_list argument)
 			_putchar(format[*i + 1]);
 			*size = *size + 1;
 			*i = *i + 2;
+		break;
+		case 'd':
+			num = (va_arg(argument, int));
+			printd(num);
+			*size = *size + int_len(num);
+			*i = *i + 2;
 			break;
 		default:
 			_putchar('%');
@@ -48,6 +55,26 @@ void _switch(int *size, int *i, const char *format, va_list argument)
 			break;
 	}
 }
+
+/**
+ * integers - .
+ * @size:
+ * @i: .
+ * @format: .
+ * @argument: .
+ */
+
+/**void integers(int *size, int *i, const char *format, va_list argument)
+{
+
+
+	switch(format[*i + 1])
+	{
+		case'i':
+			break:
+	}
+}
+**/
 
 /**
  * _printf - produces output according to a format
