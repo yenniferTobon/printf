@@ -1,5 +1,5 @@
 .\" _PRINTF.
-.TH _PRINTF 1 "Jul 2019" "GNU coreutils" "BSD General Commands Manual"
+.TH _PRINTF 1 "Jul 2019" "GNU coreutils"
 .SH NAME
 _printf \- print format.
 .SH SYNOPSIS
@@ -10,7 +10,7 @@ _printf OPTION
 _printf("Here goes what its to be printed");
 .br
 .PP
- _printf takes an argument which is a string of charaters and prints it.
+_printf takes an argument which is a string of charaters and prints it.
 .PP 
 Format specification are allow in the following cases (c, s, d, i).
 .PP
@@ -39,14 +39,17 @@ i	refers to a number
 NOTE: this is a version belonging to a personalized _printf which does not contains the flag characters, precision, field widht and  lenght modifiers.
 .SH AUTHOR
 Written by Barbara Calle and Yennifer Tobon.
+.br
+From Holberton School.
 .SH REPORTING BUGS
 No known bugs.
 .SH COPYRIGHT
-Copyright (c) 2019 Free Software Foundation, Inc. LicenseGPLv3+: GNU
-GPL version 3 or later  <http://gnu.org/licenses/gpl.html>.
+Copyright (c) 2019 Free Software Foundation, Inc. LicenseGPLv3+: GNU GPL version 3 or later  <http://gnu.org/licenses/gpl.html>.
 .br
 This is free software: you are free  to  change  and  redistribute  it.
 .br
 There is NO WARRANTY, to the extent permitted by law.
 .SH SEE ALSO
 printf(1).
+.SH TAGS
+_printf for C language.
