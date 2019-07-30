@@ -9,7 +9,7 @@
  * @i: count
  * @argument: list argument
  * Return: int
- **/
+ */
 
 void _switch(int *size, int *i, const char *format, va_list argument)
 {
@@ -56,7 +56,6 @@ void _switch(int *size, int *i, const char *format, va_list argument)
  * integers - Checks for integers.
  * @size: int.
  * @i: int.
- * @format: constant passed.
  * @argument: va_list.
  */
 
@@ -74,7 +73,8 @@ void integers(int *size, int *i, va_list argument)
  * _printf - produces output according to a format
  *  @format: list arguments
  * Return: int
- **/
+ */
+
 int _printf(const char *format, ...)
 {
 	va_list argument;
