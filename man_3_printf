@@ -1,5 +1,5 @@
 .\" _PRINTF.
-.TH _PRINTF 1 "Jul 2019" "GNU coreutils"
+.TH _PRINTF 1 "July 2019" "GNU coreutils"
 .SH NAME
 _printf \- print format.
 .SH SYNOPSIS
@@ -7,40 +7,39 @@ _printf FORMAT [ARGUMENT]...
 .br
 _printf OPTION
 .SH DESCRIPTION
-_printf("Here goes what its to be printed");
-.br
-.PP
 _printf takes an argument which is a string of charaters and prints it.
 .PP 
 Format specification are allow in the following cases (c, s, d, i).
 .PP
 c	chararacter to be printed until its last one.Does not print null.
-.br
-	_printf("%c", variable);
 .PP
 s	string to be printed until the last one which is not null.
 .br
 	receives an %s and a variable that holds the value of s, so it can be converted to what the variable holds.
-.br
-	_printf("%s", variable);
 .PP
 %	To print a porcentage
-.br
-	_printf("%%");
 .PP
 d	decimal. refer to a number and use it to print it as a decimal number of base 10.
-.br
-	_printf("%d", variable);
 .PP
 i	refers to a number 	
-.br
-	_printf("%i", variable);
 .PP
 NOTE: this is a version belonging to a personalized _printf which does not contains the flag characters, precision, field widht and  lenght modifiers.
-.SH AUTHOR
-Written by Barbara Calle and Yennifer Tobon.
+.SH HEADER
+_printf belongs to the header file	#include "holberton.h"
+.SH EXAMPLE
+_printf("Here goes what its to be printed");
 .br
-From Holberton School.
+_printf("%s", variable);
+.br
+_printf("%%");
+.br
+_printf("%c", variable);
+.br
+_printf("%d", variable);
+.br
+_printf("%i", variable);
+.SH AUTHOR
+Written by Barbara Calle and Yennifer Tobon. From Holberton School.
 .SH REPORTING BUGS
 No known bugs.
 .SH COPYRIGHT
@@ -49,7 +48,7 @@ Copyright (c) 2019 Free Software Foundation, Inc. LicenseGPLv3+: GNU GPL version
 This is free software: you are free  to  change  and  redistribute  it.
 .br
 There is NO WARRANTY, to the extent permitted by law.
-.SH SEE ALSO
-printf(1).
 .SH TAGS
 _printf for C language.
+.SH SEE ALSO
+printf(1).
