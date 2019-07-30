@@ -34,7 +34,7 @@ void _switch(int *size, int *i, const char *format, va_list argument)
 			*i = *i + 2;
 			break;
 		case '%':
-			_putchar('%');
+			_putchar(format[*i + 1]);
 			*size = *size + 1;
 			*i = *i + 2;
 			break;
@@ -63,7 +63,7 @@ int _printf(const char *format, ...)
 	}
 
 	va_start(argument, format);
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format)
 	{
 		if (format[i] == '%')
 		{
