@@ -1,29 +1,42 @@
-.\" PRINTF.
-.TH PRINTF 1 "Jul 2019" "GNU coreutils" "User commands"
+.\" _PRINTF.
+.TH _PRINTF 1 "Jul 2019" "GNU coreutils" "BSD General Commands Manual"
 .SH NAME
-printf \- print format.
+_printf \- print format.
 .SH SYNOPSIS
 _printf FORMAT [ARGUMENT]...
-_printf FLAG
+.br
+_printf OPTION
 .SH DESCRIPTION
-_printf takes an argument and prints it. Special characters that can be used:
-\\a	bell
+_printf("Here goes what its to be printed");
 .br
-\\b	backspace
+.PP
+ _printf takes an argument which is a string of charaters and prints it.
+.PP 
+Format specification are allow in the following cases (c, s, d, i).
+.PP
+c	chararacter to be printed until its last one.Does not print null.
 .br
-\\f	form feed
+	_printf("%c", variable);
+.PP
+s	string to be printed until the last one which is not null.
 .br
-\\n	new line
+	receives an %s and a variable that holds the value of s, so it can be converted to what the variable holds.
 .br
-\\r	carriage return
+	_printf("%s", variable);
+.PP
+%	To print a porcentage
 .br
-\\t	tab
+	_printf("%%");
+.PP
+d	decimal. refer to a number and use it to print it as a decimal number of base 10.
 .br
-\\v	vertical tab
+	_printf("%d", variable);
+.PP
+i	refers to a number 	
 .br
-NOTE: this is a version belonging to a personalized _printf which contains details 
-.SH OPTIONS
-The nuseradd does not take any options. However, you can supply username.
+	_printf("%i", variable);
+.PP
+NOTE: this is a version belonging to a personalized _printf which does not contains the flag characters, precision, field widht and  lenght modifiers.
 .SH AUTHOR
 Written by Barbara Calle and Yennifer Tobon.
 .SH REPORTING BUGS
