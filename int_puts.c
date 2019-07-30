@@ -5,14 +5,21 @@
  * printd - prints numbers.
  * @n: numbers.
  */
+
 void printd(int n)
 {
+	unsigned int n1;
+
 	if (n < 0)/**negativenumbers*/
 	{
 		_putchar('-');/**minus sign*/
-		n =  -n;
+		n1 = -n;
 	}
-	if (n / 10)
-		printd(n / 10);
-		_putchar(n % 10 + '0');
+	else
+	{
+		n1 = n;
+	}
+	if (n1 / 10)
+		printd(n1 / 10);
+		_putchar(n1 % 10 + '0');
 }
