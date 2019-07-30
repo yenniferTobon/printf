@@ -26,7 +26,7 @@ void _switch(int *size, int *i, const char *format, va_list argument)
 			str = (va_arg(argument, char*));
 			if (str == NULL)
 			{
-				str = "(nil)";
+				*size = -1;
 				break;
 			}
 			_puts(str);
@@ -38,8 +38,12 @@ void _switch(int *size, int *i, const char *format, va_list argument)
 			*size = *size + 1;
 			*i = *i + 2;
 			break;
+		default:
+			_putchar('%');
+			*size = *size + 1;
+			*i = *i + 1;
+			break;
 	}
-
 }
 
 /**
@@ -52,34 +56,31 @@ int _printf(const char *format, ...)
 	va_list argument;
 	int i = 0, size = 0;
 
-	while (format == NULL)
-		return (0);
+	if (format == NULL)
+	{
+		size = -1;
+		return (size);
+	}
 
 	va_start(argument, format);
-	for (i = 0; format[i] != '\0'; i++)
+	while (format[i] != '\0')
 	{
-		if (*(format + i) == '%')
+		if (format[i] == '%')
 		{
-			if (*(format + (i + 1)) == '\0')
+			if (format[i + 1] == '\0')
 			{
-				if (i != 0)
-				{
-					printf("%d", 1);
-					size = -1;
-					return (size);
-				}
-				else
-				{
-					printf("%d", -1);
-					return (1);
-				}
+				size = -1;
+				return (size);
 			}
 			_switch(&size, &i, format, argument);
 		}
-		_putchar(format[i]);
-		size = size + 1;
+		else
+		{
+			_putchar(format[i]);
+			size = size + 1;
+			i++;
+		}
 	}
 	va_end(argument);
-	printf("%d\n", size);
 	return (size);
 }

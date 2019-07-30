@@ -9,57 +9,21 @@
  */
 int main(void)
 {
-/**    int len;
-    int len2;
-   unsigned int ui;
-    void *addr;**/
-   _printf("%");
-_printf("######");
-    _printf("xyz%");
-_printf("#####");
-   _printf("%k%");
-_printf("#####");
-   _printf("%kk");
-printf("\n");
-printf("****");
-   printf("%");
-printf("****");
-   printf("xyz%");
-printf("****");
-   printf("%k%");
-printf("****");
-   printf("%kk");
-   /** _printf("Let's try to printf a simple sentence%\n");**/
-   /**_printf("xyz%k\n");**/
-/**   _printf("Character:[%c]\n", 'H');
-   _printf("la casa is %s y el carro is %s.\n", "roja", "negro");
-   _printf("Percent:[%%]\n");**/
-  /** len = printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
-    ui = (unsigned int)INT_MAX + 1024;
-    addr = (void *)0x7ffe637541f0;
-    _printf("Length:[%d, %i]\n", len, len);
-    printf("Length:[%d, %i]\n", len2, len2);
-    _printf("Negative:[%d]\n", -762534);
-    printf("Negative:[%d]\n", -762534);
-    _printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned:[%u]\n", ui);
-    _printf("Unsigned octal:[%o]\n", ui);
-    printf("Unsigned octal:[%o]\n", ui);
-    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-    _printf("Address:[%p]\n", addr);
-    printf("Address:[%p]\n", addr);
-    len = _printf("Percent:[%%]\n");
-    len2 = printf("Percent:[%%]\n");
-    _printf("Len:[%d]\n", len);
-    printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");**/
-    return (0);
+	/*int cont = 0;
+	int n = 0;
+	int p = 0;
+	printf("\n");
+	n = printf("n: %%");
+	printf("\n");
+	p = _printf("p: %%\0");
+	printf("\n");
+	printf("%d conteo de bytes de normal\n", p);
+	printf("%d conteo de bytes de perzonalizado\n", n);
+	return (cont);*/
+	int n = printf("hola[%c]", 'H');
+	printf("\n");
+	int p = _printf("hola[%c]", 'H');
+	printf("\n%d", n);
+	printf("%d", p);
 }
 
