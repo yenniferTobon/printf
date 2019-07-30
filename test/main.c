@@ -20,10 +20,10 @@ int main(void)
 	printf("%d conteo de bytes de normal\n", p);
 	printf("%d conteo de bytes de perzonalizado\n", n);
 	return (cont);*/
-	int n = printf("hola [%c]", 'H');
-	printf("\n");
-	int p = _printf("hola [%c]", 'H');
-	printf("\n%d", n);
-	printf("%d", p);
+	printf("hola %d %i", -45656, INT_MAX);
+	_printf("hola %d %i", -45656, INT_MAX);
+	/**printf("\n%d", n);
+	printf("%d", p);**/
+	return (0);
 }
 
