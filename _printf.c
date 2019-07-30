@@ -33,8 +33,8 @@ void _switch(int *size, int *i, const char *format, va_list argument)
 			{
 				_puts(str);
 				*size = *size + _strlen(str);
-				*i = *i + 2;
 			}
+			*i = *i + 2;
 			break;
 		case '%':
 			_putchar(format[*i + 1]);
@@ -70,12 +70,17 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '\0')
+			if (format[i + 1] == '\0' && format[i - 1])
+			{
+				_switch(&size, &i, format, argument);
+			}
+			else if (format[i + 1] == '\0')
 			{
 				size = -1;
 				return (size);
 			}
-			_switch(&size, &i, format, argument);
+			else
+				_switch(&size, &i, format, argument);
 		}
 		else
 		{
