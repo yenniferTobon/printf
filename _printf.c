@@ -63,9 +63,16 @@ int _printf(const char *format, ...)
 			if (*(format + (i + 1)) == '\0')
 			{
 				if (i != 0)
-					return (-1);
+				{
+					printf("%d", 1);
+					size = -1;
+					return (size);
+				}
 				else
-					return (-1);
+				{
+					printf("%d", -1);
+					return (1);
+				}
 			}
 			_switch(&size, &i, format, argument);
 		}
@@ -73,5 +80,6 @@ int _printf(const char *format, ...)
 		size = size + 1;
 	}
 	va_end(argument);
+	printf("%d\n", size);
 	return (size);
 }
