@@ -8,7 +8,7 @@ int _putchar(char c);
 int _strlen(char *s);
 void _puts(char *str);
 void _switch(int *size, int *i, const char *format, va_list argument);
+int int_len(int l);
+void printd(int n);
 
 #endif
-
-
