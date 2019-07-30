@@ -41,7 +41,7 @@ void _switch(int *size, int *i, const char *format, va_list argument)
 			*size = *size + 1;
 			*i = *i + 2;
 		break;
-		case 'd':
+		case 'd': case 'i':
 			integers(size, i, argument);
 			break;
 		default:
