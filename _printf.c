@@ -26,12 +26,15 @@ void _switch(int *size, int *i, const char *format, va_list argument)
 			str = (va_arg(argument, char*));
 			if (str == NULL)
 			{
-				*size = -1;
-				break;
+				_puts("(null)");
+				*size = *size + _strlen("(null)");
 			}
-			_puts(str);
-			*size = *size + _strlen(str);
-			*i = *i + 2;
+			else
+			{
+				_puts(str);
+				*size = *size + _strlen(str);
+				*i = *i + 2;
+			}
 			break;
 		case '%':
 			_putchar(format[*i + 1]);
