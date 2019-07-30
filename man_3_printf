@@ -1,0 +1,39 @@
+.\" PRINTF.
+.TH PRINTF 1 "Jul 2019" "GNU coreutils" "User commands"
+.SH NAME
+printf \- print format.
+.SH SYNOPSIS
+_printf FORMAT [ARGUMENT]...
+_printf FLAG
+.SH DESCRIPTION
+_printf takes an argument and prints it. Special characters that can be used:
+\\a	bell
+.br
+\\b	backspace
+.br
+\\f	form feed
+.br
+\\n	new line
+.br
+\\r	carriage return
+.br
+\\t	tab
+.br
+\\v	vertical tab
+.br
+NOTE: this is a version belonging to a personalized _printf which contains details 
+.SH OPTIONS
+The nuseradd does not take any options. However, you can supply username.
+.SH AUTHOR
+Written by Barbara Calle and Yennifer Tobon.
+.SH REPORTING BUGS
+No known bugs.
+.SH COPYRIGHT
+Copyright (c) 2019 Free Software Foundation, Inc. LicenseGPLv3+: GNU
+GPL version 3 or later  <http://gnu.org/licenses/gpl.html>.
+.br
+This is free software: you are free  to  change  and  redistribute  it.
+.br
+There is NO WARRANTY, to the extent permitted by law.
+.SH SEE ALSO
+printf(1).
