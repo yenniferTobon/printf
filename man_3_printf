@@ -4,8 +4,6 @@
 _printf \- print format.
 .SH SYNOPSIS
 _printf FORMAT [ARGUMENT]...
-.br
-_printf OPTION
 .SH DESCRIPTION
 _printf takes an argument which is a string of charaters and prints it.
 .PP 
