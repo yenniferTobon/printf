@@ -2,7 +2,7 @@
 
 Printf takes a string and prints it.
 
-####DESCRIPTION
+###DESCRIPTION
 
 Format specification are allow in the following cases (c, s, d, i).
 
@@ -19,7 +19,7 @@ i    refers to a number
 
 NOTE: this is a version belonging to a personalized printf which does not contains the flag characters, precision, field widht and lenght modifiers.
 
-####EXAMPLES
+###EXAMPLES
 
 	#include "holberton.h" 
 	printf("I love pointer");
