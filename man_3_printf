@@ -1,5 +1,5 @@
 .\" _PRINTF.
-.TH _PRINTF 1 "July 2019" "GNU coreutils"
+.TH _PRINTF 3 "July 2019" "GNU coreutils"
 .SH NAME
 _printf \- print format.
 .SH SYNOPSIS
@@ -25,6 +25,8 @@ NOTE: this is a version belonging to a personalized _printf which does not conta
 .SH HEADER
 _printf belongs to the header file	#include "holberton.h"
 .SH EXAMPLE
+#include "holberton.h"
+.PP
 _printf("Here goes what its to be printed");
 .br
 _printf("%s", variable);
@@ -40,12 +42,6 @@ _printf("%i", variable);
 Written by Barbara Calle and Yennifer Tobon. From Holberton School.
 .SH REPORTING BUGS
 No known bugs.
-.SH COPYRIGHT
-Copyright (c) 2019 Free Software Foundation, Inc. LicenseGPLv3+: GNU GPL version 3 or later  <http://gnu.org/licenses/gpl.html>.
-.br
-This is free software: you are free  to  change  and  redistribute  it.
-.br
-There is NO WARRANTY, to the extent permitted by law.
 .SH TAGS
 _printf for C language.
 .SH SEE ALSO
