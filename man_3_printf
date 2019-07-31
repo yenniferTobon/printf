@@ -1,5 +1,5 @@
 .\" _PRINTF.
-.TH _PRINTF 1 "July 2019" "GNU coreutils"
+.TH _PRINTF 3 "July 2019" "GNU coreutils"
 .SH NAME
 _printf \- print format.
 .SH SYNOPSIS
